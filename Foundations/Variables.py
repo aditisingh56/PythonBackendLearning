@@ -6,3 +6,6 @@ name = "Aditi"
 age = 18
 country = "India"
 print(f"{name} is {age} years old and is from {country}.")
+# print(name, "exploring")  we can n ot use + when we are dealing wiuth integer , we can on lyu use it witjh variable 
+print(name+name)
+#print(name+age) # this will give an error because we can not add a string and an integer together
