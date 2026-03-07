@@ -1,5 +1,17 @@
-<h1>
+<!-- this was my first text that i  displayed -->
+
+<!-- <h1>
   Welcomne , {{name}}<br />
   you are {{age}} year old<br />
   you are from{{country}}
-</h1>
+</h1> -->
+
+<h1>Input your text below:</h1>
+
+<!--  !--here action is the url pattern defined in urls.py file and method is the type of request we are sending to the server, in this case we are sending a get request to the server when we submit the form. and when we submit the form it will send the data to the url pattern defined in urls.py file and then it will call the function defined in views.py file and execute the code inside that function and return the response to the user. -->
+
+<form action="counters" method="POST">
+  {% csrf_token %}
+  <textarea name="text" rows="10" cols="30"> </textarea><br />
+  <input type="submit" />
+</form>
