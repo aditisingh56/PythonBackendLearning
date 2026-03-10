@@ -15,7 +15,7 @@ def index(request):
     return render(request, 'index.html') # here we are rendering the index.html template when we go to the root page of the website. we need to create a templates folder in the base directory of the project and then create an index.html file inside that folder and write some html code in that file to see the response when we go to the root page of the website.
 
 def counters(request):
-    text = request.POST['text'] 
+    text = request.GET['text'] 
     amount_words = len(text.split()) # this will split the text into a list of words
      # Get the text from the query parameters
     return render(request , "counter.html" , {"amount": amount_words})  # here we are rendering the counter.html template when we go to the root page of the website. we need to create a templates folder in the base directory of the project and then create a counter.html file inside that folder and write some html code in that file to see the response when we go to the root page of the website. we are also passing a context dictionary
