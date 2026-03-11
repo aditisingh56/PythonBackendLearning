@@ -1,3 +1,6 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+<!--  any external file we link is called, static file. so this is a static file too -->
 <!-- this was my first text that i  displayed -->
 
 <!-- <h1>
@@ -5,14 +8,16 @@
   you are {{age}} year old<br />
   you are from{{country}}
 </h1> -->
-
-<h1>Input your text below:</h1>
+<!-- 
+<h1>Input your text below:</h1> -->
 
 <!--  !--here action is the url pattern defined in urls.py file and method is the type of request we are sending to the server, in this case we are sending a get request to the server when we submit the form. and when we submit the form it will send the data to the url pattern defined in urls.py file and then it will call the function defined in views.py file and execute the code inside that function and return the response to the user. -->
 
-<form action="counters" method="GET">
-  <!-- point to remebr her eis , very important. ewhat method we use here, dsame method we use in views to acess them-->
-  <!-- {% csrf_token %} we need this only when we arew using the method as post, for now i'm trying get -->
-  <textarea name="text" rows="10" cols="30"> </textarea><br />
+<!-- <form action="counters" method="GET"> -->
+<!-- point to remebr her eis , very important. ewhat method we use here, dsame method we use in views to acess them-->
+<!-- {% csrf_token %} we need this only when we arew using the method as post, for now i'm trying get -->
+<!-- <textarea name="text" rows="10" cols="30"> </textarea><br />
   <input type="submit" />
-</form>
+</form> -->
+
+<h1>Welcome to my website</h1>

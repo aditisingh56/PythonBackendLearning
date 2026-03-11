@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+import os # we need to import os module to use the os.path.join function to join the path of the static files with the base directory of the project.
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -115,3 +116,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = "static/"
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"), # this means that we are telling django to look for static files in the static folder which is located in the base directory of the project. we can also specify multiple directories by adding them to the list.
+    # HERE STATICFILES_DIRS this is just a list of directories where django will look for static files, we can also specify multiple directories by adding them to the list., you can also name the static folder anything you want, it doesn't have to be static, also you can anme this STATICFILES_DIRS anything you want, it doesn't have to be STATICFILES_DIRS, but it is a convention to name it STATICFILES_DIRS.. the syntax is os.path.join(BASE_DIR, "folder_name") where folder_name is the name of the folder where you want to store your static files. and BASE_DIR is the base directory of the project which is defined at the top of this file.
+]
